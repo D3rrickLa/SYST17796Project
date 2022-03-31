@@ -20,9 +20,8 @@ public abstract class Players {
 	 * A constructor that allows you to set the player's unique ID
 	 * @param name the unique ID to assign to this player.
 	 */
-	public void Player(String name) {
-		// TODO - implement Players.Player
-		throw new UnsupportedOperationException();
+	public Players(String name) {
+		setPlayerID(name);
 	}
 
 	/**

@@ -11,8 +11,11 @@ public class CasinoWars extends Game {
        
         @Override
 	public void play() {
-		// TODO - implement CasinoWars.play
-		throw new UnsupportedOperationException();
+		Dealer dealer = new Dealer();
+		dealer.shuffle();
+		for (int i = 0; i < 5; i++) {
+			System.out.println(dealer.Distribute());
+		}
 	}
         
         

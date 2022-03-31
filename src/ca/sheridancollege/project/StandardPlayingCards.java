@@ -27,14 +27,13 @@ public class StandardPlayingCards extends Card {
 	 * @param ranks
 	 */
 	public StandardPlayingCards(Suits suits, Rank ranks) {
-		// TODO - implement StandardPlayingCards.StandardPlayingCards
-		throw new UnsupportedOperationException();
+		setSuits(suits);
+		setRanks(ranks);
 	}
 
 	@Override
 	public String toString() {
-		// TODO - implement StandardPlayingCards.toString
-		throw new UnsupportedOperationException();
+		return getRanks() + " of " + getSuits();
 	}
 
 }

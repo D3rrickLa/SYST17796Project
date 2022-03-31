@@ -13,14 +13,15 @@ public class CasinoWarsPlayer extends Players {
 	 * 
 	 * @param name
 	 */
-	public CasinoWarsPlayer(Players name) {
-		// TODO - implement CasinoWarsPlayer.CasinoWarsPlayer
-		throw new UnsupportedOperationException();
+	public CasinoWarsPlayer(String name, int bettingAmount, int balance){
+		super(name);
+		setBettingAmount(bettingAmount);
+		setBalance(balance);
 	}
 
 	public ArrayList<Dealer> showCard() {
-		// TODO - implement CasinoWarsPlayer.showCard
-		throw new UnsupportedOperationException();
+		//returns the card given to by the dealer
+		return null;
 	}
 
 	public void play() {
@@ -28,15 +29,21 @@ public class CasinoWarsPlayer extends Players {
 		throw new UnsupportedOperationException();
 	}
 
+	//maybe make this a boolean
 	public int bet() {
 		// TODO - implement CasinoWarsPlayer.bet
 		throw new UnsupportedOperationException();
 	}
 
+	//maybe make this a boolean
 	public void leaveGame() {
-		// TODO - implement CasinoWarsPlayer.leaveGame
-		throw new UnsupportedOperationException();
+		System.exit(0);
 	}
+
+
+
+
+
 
 	public int getBettingAmount() {
 		return this.bettingAmount;

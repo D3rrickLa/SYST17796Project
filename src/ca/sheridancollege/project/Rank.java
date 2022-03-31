@@ -21,22 +21,22 @@ public enum Rank {
 	public final int rankKey;
 	public final String rankValue;
 
-	public int getRankKey() {
-		return this.rankKey;
-	}
-
-	public String getRankValue() {
-		return this.rankValue;
-	}
-
 	/**
 	 * 
 	 * @param rankKey
 	 * @param rankValue
 	 */
-	Rank(int rankKey, String rankValue) {
-		// TODO - implement Rank.Rank
-		throw new UnsupportedOperationException();
-	}
+	Rank(int rankKey, String rankValue){
+        this.rankKey = rankKey;
+        this.rankValue = rankValue;
+    }
+
+    public int getRankKey() {
+        return rankKey;
+    }
+
+    public String getRankValue() {
+        return rankValue;
+    }
 
 }
