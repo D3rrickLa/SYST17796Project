@@ -15,14 +15,15 @@ public class Dealer {
 	}
 
 	public ArrayList<StandardPlayingCards> Distribute() {
-		getCards.get(1);
-		return getCards;
+		double randomNumber = Math.random() * 52;
+		ArrayList<StandardPlayingCards> re= new ArrayList<>();
+		re.add(getCards.get((int) randomNumber)); 
+		getCards.remove((int) randomNumber);
+		return re;
 	}
 
 	public void shuffle() {
-		Collections.shuffle(getCards);
-	
-		
+		Collections.shuffle(getCards);	
 	}
 
 }
