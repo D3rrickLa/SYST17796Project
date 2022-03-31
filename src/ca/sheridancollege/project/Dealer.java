@@ -1,6 +1,7 @@
 package ca.sheridancollege.project;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Dealer {
 
@@ -8,18 +9,20 @@ public class Dealer {
 	private ArrayList<StandardPlayingCards> getCards;
 
 	public Dealer() {
-		// TODO - implement Dealer.Dealer
-		throw new UnsupportedOperationException();
+		deck = new GroupOfCards(52);
+		getCards = new ArrayList<StandardPlayingCards>();
+		getCards.addAll(deck.showCards());
 	}
 
 	public ArrayList<StandardPlayingCards> Distribute() {
-		// TODO - implement Dealer.Distribute
-		throw new UnsupportedOperationException();
+		getCards.get(1);
+		return getCards;
 	}
 
 	public void shuffle() {
-		// TODO - implement Dealer.shuffle
-		throw new UnsupportedOperationException();
+		Collections.shuffle(getCards);
+	
+		
 	}
 
 }
