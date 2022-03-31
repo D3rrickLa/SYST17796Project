@@ -7,8 +7,8 @@ public class playGame {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		GroupOfCards cards = new GroupOfCards(52);
-		System.out.println(cards.showCards());
+		// GroupOfCards cards = new GroupOfCards(52);
+		// System.out.println(cards.showCards());
 
 
 		// Dealer d1 = new Dealer();

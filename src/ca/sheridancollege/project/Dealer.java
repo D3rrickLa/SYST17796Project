@@ -15,11 +15,13 @@ public class Dealer {
 	}
 
 	public ArrayList<StandardPlayingCards> Distribute() {
-		double randomNumber = Math.random() * 52;
-		ArrayList<StandardPlayingCards> re= new ArrayList<>();
-		re.add(getCards.get((int) randomNumber)); 
+		double randomNumber = Math.random() * deck.getSize();
+		ArrayList<StandardPlayingCards> returnCard= new ArrayList<>();
+		returnCard.add(getCards.get((int) randomNumber));
 		getCards.remove((int) randomNumber);
-		return re;
+		deck.setSize(deck.getSize()-1);
+		
+		return returnCard;
 	}
 
 	public void shuffle() {

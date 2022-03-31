@@ -7,22 +7,28 @@ public class CasinoWars extends Game {
         
         public CasinoWars(String s){
             super(s);
+			roundsPlayed = 0;
         }
        
         @Override
 	public void play() {
-		Dealer dealer = new Dealer();
-		dealer.shuffle();
-		for (int i = 0; i < 5; i++) {
-			System.out.println(dealer.Distribute());
+		while(roundsPlayed < 10){		
+			Dealer dealer = new Dealer();
+			dealer.shuffle();
+			for (int i = 0; i < 5; i++) {
+				System.out.println(dealer.Distribute());
+				
+			}
+			roundsPlayed++;
 		}
+
+
 	}
         
         
         @Override
 	public void declareWinner() {
-		// TODO - implement CasinoWars.declareWinner
-		throw new UnsupportedOperationException();
+
                
 	}
 
