@@ -11,6 +11,11 @@ import java.util.*;
 
 public abstract class Game {
     private final String gameName;//the title of the game
+
+    public Game(String gameName, ArrayList<Players> players) {
+        this.gameName = gameName;
+        this.players = players;
+    }
     private ArrayList <Players> players;// the players of the game
     
     public Game(String givenName)

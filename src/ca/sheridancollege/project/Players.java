@@ -1,10 +1,13 @@
 package ca.sheridancollege.project;
 
+import java.util.ArrayList;
+
 /**
  * A class that models each Player in the game. Players have an identifier, which should be unique.
  * @author dancye, 2018
  */
 public abstract class Players {
+
 
 	private String playerID;
 
@@ -29,5 +32,4 @@ public abstract class Players {
 	 * with your specific type of Player and filled in with logic to play your game.
 	 */
 	public abstract void play();
-
 }

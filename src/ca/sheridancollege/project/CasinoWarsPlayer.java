@@ -6,16 +6,15 @@ public class CasinoWarsPlayer extends Players {
 
 	private int balance;
 	private StandardPlayingCards card;
-	private int bettingAmount;
+	private final int bettingAmount=25;
 	private int numberOfWins;
 
 	/**
 	 * 
 	 * @param name
 	 */
-	public CasinoWarsPlayer(String name, int bettingAmount, int balance){
+	public CasinoWarsPlayer(String name, int balance){
 		super(name);
-		setBettingAmount(bettingAmount);
 		setBalance(balance);
 	}
 
@@ -45,17 +44,6 @@ public class CasinoWarsPlayer extends Players {
 
 
 
-	public int getBettingAmount() {
-		return this.bettingAmount;
-	}
-
-	/**
-	 * 
-	 * @param bettingAmount
-	 */
-	public void setBettingAmount(int bettingAmount) {
-		this.bettingAmount = bettingAmount;
-	}
 
 	public int getBalance() {
 		return this.balance;
@@ -72,6 +60,7 @@ public class CasinoWarsPlayer extends Players {
 	public StandardPlayingCards getCard() {
 		return this.card;
 	}
+        
 
 	/**
 	 * 
@@ -92,5 +81,16 @@ public class CasinoWarsPlayer extends Players {
 	public void setNumberOfWins(int numberOfWins) {
 		this.numberOfWins = numberOfWins;
 	}
+        
+        public boolean checkBalance(int balanace)
+        {
+            return balanace >= 250;
+        }
+        
+        @Override
+        public String toString()
+        {
+            return "name : "+super.getPlayerID()+"\nBalance : "+getBalance();
+        }
 
 }
