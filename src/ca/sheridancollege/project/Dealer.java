@@ -20,7 +20,6 @@ public class Dealer {
 		returnCard.add(getCards.get((int) randomNumber));
 		getCards.remove((int) randomNumber);
 		deck.setSize(deck.getSize()-1);
-		
 		return returnCard;
 	}
 
