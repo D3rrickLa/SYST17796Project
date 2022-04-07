@@ -10,17 +10,20 @@ public class Dealer {
 
 	public Dealer() {
 		deck = new GroupOfCards(52);
-		getCards = new ArrayList<StandardPlayingCards>();
-		getCards.addAll(deck.showCards());
+		getCards = new ArrayList<>();
+		getCards.addAll(deck.showCards()); // this is an arraylist contain all the standard cards
+ 
 	}
 
-	public ArrayList<StandardPlayingCards> Distribute() {
-		double randomNumber = Math.random() * deck.getSize();
-		ArrayList<StandardPlayingCards> returnCard= new ArrayList<>();
-		returnCard.add(getCards.get((int) randomNumber));
-		getCards.remove((int) randomNumber);
-		deck.setSize(deck.getSize()-1);
-		return returnCard;
+	public StandardPlayingCards Distribute() {
+		//we now want to take the arraylist from getCards and return only one card from that list, while also removing it
+		double randomNumber = Math.random() * (getCards.size());
+		StandardPlayingCards b = getCards.get((int)randomNumber);
+		String s = String.format("%s", b);
+		String[] arr = s.split(" ");
+		StandardPlayingCards c = new StandardPlayingCards(Suits.valueOf(arr[2]), Rank.valueOf(arr[0]));
+		getCards.remove((int)randomNumber);
+		return c; //return new StandardPlayingCards
 	}
 
 	public void shuffle() {

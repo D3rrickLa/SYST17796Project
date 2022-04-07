@@ -1,38 +1,27 @@
 package ca.sheridancollege.project;
 
-import java.util.ArrayList;
-
 public class CasinoWarsPlayer extends Players {
 
 	private int balance;
-	private StandardPlayingCards card;
-	private int bettingAmount;
+	private final int bettingAmount = 25;
 	private int numberOfWins;
+	private StandardPlayingCards card;
 
-	/**
-	 * 
-	 * @param name
-	 */
-	public CasinoWarsPlayer(String name, int bettingAmount, int balance){
+	public CasinoWarsPlayer(String name, int balance, StandardPlayingCards cards){
 		super(name);
-		setBettingAmount(bettingAmount);
 		setBalance(balance);
+		setCard(cards);
+		setNumberOfWins(0);
 	}
 
-	public ArrayList<Dealer> showCard() {
-		//returns the card given to by the dealer
-		return null;
-	}
-
+	@Override
 	public void play() {
-		// TODO - implement CasinoWarsPlayer.play
-		throw new UnsupportedOperationException();
+		setBalance(getBalance()-bet());
 	}
 
 	//maybe make this a boolean
 	public int bet() {
-		// TODO - implement CasinoWarsPlayer.bet
-		throw new UnsupportedOperationException();
+		return bettingAmount;
 	}
 
 	//maybe make this a boolean
@@ -40,31 +29,11 @@ public class CasinoWarsPlayer extends Players {
 		System.exit(0);
 	}
 
-
-
-
-
-
-	public int getBettingAmount() {
-		return this.bettingAmount;
-	}
-
-	/**
-	 * 
-	 * @param bettingAmount
-	 */
-	public void setBettingAmount(int bettingAmount) {
-		this.bettingAmount = bettingAmount;
-	}
-
 	public int getBalance() {
 		return this.balance;
 	}
 
-	/**
-	 * 
-	 * @param balance
-	 */
+
 	public void setBalance(int balance) {
 		this.balance = balance;
 	}
@@ -73,11 +42,8 @@ public class CasinoWarsPlayer extends Players {
 		return this.card;
 	}
 
-	/**
-	 * 
-	 * @param card
-	 */
-	public void setCard(StandardPlayingCards card) {
+
+  	public void setCard(StandardPlayingCards card) {
 		this.card = card;
 	}
 
@@ -85,12 +51,14 @@ public class CasinoWarsPlayer extends Players {
 		return this.numberOfWins;
 	}
 
-	/**
-	 * 
-	 * @param numberOfWins
-	 */
 	public void setNumberOfWins(int numberOfWins) {
 		this.numberOfWins = numberOfWins;
 	}
 
+	//this is used to print out the actual player's name and balance, instead of
+	//the memory address
+	@Override
+	public String toString(){
+		return "name: "+super.getPlayerID()+", Balance: "+getBalance() + ", Card:" + getCard();
+	}
 }

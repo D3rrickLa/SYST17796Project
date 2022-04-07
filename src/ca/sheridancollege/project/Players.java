@@ -6,14 +6,15 @@ package ca.sheridancollege.project;
  */
 public abstract class Players {
 
+
 	private String playerID;
 
 	public String getPlayerID() {
-		return this.playerID;
+            return this.playerID;
 	}
 
 	public void setPlayerID(String playerID) {
-		this.playerID = playerID;
+            this.playerID = playerID;
 	}
 
 	/**
@@ -21,7 +22,7 @@ public abstract class Players {
 	 * @param name the unique ID to assign to this player.
 	 */
 	public Players(String name) {
-		setPlayerID(name);
+            setPlayerID(name);
 	}
 
 	/**
@@ -29,5 +30,4 @@ public abstract class Players {
 	 * with your specific type of Player and filled in with logic to play your game.
 	 */
 	public abstract void play();
-
 }

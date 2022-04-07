@@ -1,0 +1,82 @@
+Where all the unused, placeholder, sinky code gooes to, but we still need a backup
+
+
+
+----playgame---
+		GroupOfCards cards = new GroupOfCards(52);
+		System.out.println(cards.showCards());
+
+
+		Dealer d1 = new Dealer();
+		d1.shuffle();
+		System.out.println("\n\n\n\n");
+		for (int i = 0; i < 5; i++) {
+			System.out.println(d1.Distribute());
+			
+		}
+
+		CasinoWars game1 = new CasinoWars("Game");
+		game1.play();
+
+		              // GroupOfCards cards = new GroupOfCards(52);
+		// System.out.println(cards.showCards());
+
+
+		// Dealer d1 = new Dealer();
+		// System.out.println(d1.Distribute());
+		// d1.shuffle();
+		// System.out.println("\n\n\n\n");
+		// System.out.println(d1.Distribute());
+                 
+		//CasinoWars game1 = new CasinoWars("Game");
+		//game1.play();
+
+
+---CasinoWars---
+	private CasinoWarsPlayer player;
+	private int roundsPlayed;
+
+        
+        public CasinoWars(String s){
+            super(s);
+			roundsPlayed = 0;
+        }
+       
+        @Override
+	public void play() {
+		while(roundsPlayed < 10){		
+			Dealer dealer = new Dealer();
+			dealer.shuffle();
+			for (int i = 0; i < 5; i++) {
+				System.out.println(dealer.Distribute());
+				
+			}
+			roundsPlayed++;
+		}
+
+
+	}
+        
+        
+        @Override
+	public void declareWinner() {
+		CasinoWarsPlayer player = new CasinoWarsPlayer("test", 25, 250);
+		if(player.getNumberOfWins() == 10){
+			System.out.println("winner");
+		}
+               
+	}
+
+
+
+	public int getRoundsPlayed() {
+		return this.roundsPlayed;
+	}
+
+	/**
+	 * 
+	 * @param roundsPlayed
+	 */
+	public void setRoundsPlayed(int roundsPlayed) {
+		this.roundsPlayed = roundsPlayed;
+	}
