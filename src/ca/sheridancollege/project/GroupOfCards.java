@@ -12,7 +12,7 @@ public class GroupOfCards {
 	 * @param givenSize
 	 */
 	public GroupOfCards(int givenSize) {
-		this.cards = new ArrayList<StandardPlayingCards>();
+		this.cards = new ArrayList<>();
 		setSize(givenSize);
 		
 	}

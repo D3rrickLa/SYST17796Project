@@ -1,7 +1,5 @@
 package ca.sheridancollege.project;
 
-import java.util.ArrayList;
-
 /**
  * A class that models each Player in the game. Players have an identifier, which should be unique.
  * @author dancye, 2018
@@ -12,11 +10,11 @@ public abstract class Players {
 	private String playerID;
 
 	public String getPlayerID() {
-		return this.playerID;
+            return this.playerID;
 	}
 
 	public void setPlayerID(String playerID) {
-		this.playerID = playerID;
+            this.playerID = playerID;
 	}
 
 	/**
@@ -24,7 +22,7 @@ public abstract class Players {
 	 * @param name the unique ID to assign to this player.
 	 */
 	public Players(String name) {
-		setPlayerID(name);
+            setPlayerID(name);
 	}
 
 	/**
