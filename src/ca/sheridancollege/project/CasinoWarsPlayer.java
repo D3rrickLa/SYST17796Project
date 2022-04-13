@@ -24,11 +24,6 @@ public class CasinoWarsPlayer extends Players {
 		return bettingAmount;
 	}
 
-	//maybe make this a boolean
-	public void leaveGame() {
-		System.exit(0);
-	}
-
 	public int getBalance() {
 		return this.balance;
 	}
