@@ -49,7 +49,12 @@ public class CasinoWars extends Game {
                     playerName = input.next();
                     while(true){
                         System.out.println("Please enter your balance");
-                        balance = input.nextInt();
+                        while(input.hasNextInt())
+                        {
+                            balance = input.nextInt();
+                            break;
+                        }
+                        
                         input.nextLine(); //eats the nextline from the nextInt
                         if(confirmPlayerBalance(balance)){
                             break;
@@ -268,7 +273,7 @@ public class CasinoWars extends Game {
         if(balance >= 250){
             return true;
         }
-//        System.out.println("Error: Insufficient funds (A minimum of $250 is needed)");
+        System.out.println("Error: Insufficient funds (A minimum of $250 is needed)");
         return false;
 
     }
